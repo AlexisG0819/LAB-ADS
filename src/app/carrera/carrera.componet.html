@@ -1,34 +1,30 @@
+<!-- hello word -->
 <div class="container">
     <div class="d-flex justify-content-between mt-4">
-      <h4>Mantenimiento Estudiantes</h4>
+      <h4>Mantenimiento Carreras</h4>
       <button class="btn btn-success" (click)="navigateToForm()">Agregar</button>
     </div>
     <table class="table table-bordered mt-4">
       <thead>
         <tr>
           <th>ID</th>
-          <th>Nombres</th>
-          <th>Apellidos</th>
           <th>Codigo</th>
-          <th>Email</th>
-          <th>Opciones</th>
+          <th>Carrera</th>
         </tr>
       </thead>
       <tbody>
-        @for (item of lstEstudiantes; track index; let index = $index) {
+        @for (item of lstCarrera; track index; let index = $index) {
         <tr>
-          <td>{{ item.idEstudiante }}</td>
-          <td>{{ item.nombresEstudiante }}</td>
-          <td>{{ item.apellidosEstudiante}}</td>
-          <td>{{ item.codigoEstudiante }}</td>
-          <td>{{ item.correoEstudiante }}</td>
+          <td>{{ item.idCarrea }}</td>
+          <td>{{ item.codigoCarrera }}</td>
+          <td>{{ item.nombreCarrera}}</td>
           <td>
             <!-- Podemos enviar valores a metodos en el .ts de esta  forma-->
-            <button class="btn btn-primary"(click)="updateEstudiante(item.idEstudiante)">Actualizar</button>
+            <button class="btn btn-primary"(click)="updateCarrera(item.idCarrea)">Actualizar</button>
             <!-- Esta es otra forma con la que podemos enviar valores a metodos en el .ts-->
             <button
               class="btn btn-danger ml-2"
-               (click)="deleteEstudiante($event)" value="{{ item.idEstudiante }}">Eliminar</button>
+               (click)="deleteCarrera($event)" value="{{ item.idCarrea }}">Eliminar</button>
           </td>
         </tr>
         }

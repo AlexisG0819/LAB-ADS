@@ -5,6 +5,7 @@ import { Estudiante } from '../interfaces/estudiante.interface';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { parsearErroresAPI } from '../utils/Utilities';
+
 @Component({
   selector: 'app-estudiantes',
   standalone: true,
@@ -28,7 +29,7 @@ export class EstudiantesComponent implements OnInit {
   }
   // Obtener lista de estudiantes
   getAllEstudiantes() {
-    this.estudiantesService.obtenerEstudiantesPorID().subscribe({
+    this.estudiantesService.obtenerEstudiantes().subscribe({
       // Se evalua que la respuesta del endpoint sea exitosa
       next: (temp) => {
         // Se asigna la lista al arreglo anteriormente descrito

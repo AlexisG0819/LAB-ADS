@@ -9,11 +9,11 @@ export class EstudiantesService {
   private readonly http = inject(HttpClient);
   constructor() {}
   // Obtener lista de estudiantes
-  obtenerEstudiantesPorID() {
-    return this.http.get<Estudiante[]>(endpoints.obtenerEstudiantePorID);
+  obtenerEstudiantes() {
+    return this.http.get<Estudiante[]>(endpoints.obtenerEstudiantes);
   }
   // Obtener estudiante por ID
-  obtenerEstudiantes(idEstudiante: number) {
+  obtenerEstudiantesPorID(idEstudiante: number) {
     return this.http.get<Estudiante>(
       endpoints.obtenerEstudiantes.replace(':idEstudiante', idEstudiante.toString())
     );

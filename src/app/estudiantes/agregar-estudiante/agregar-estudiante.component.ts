@@ -52,7 +52,7 @@ export class AgregarEstudianteComponent implements OnInit {
     if (this.idEstudiante && this.idEstudiante > 0) {
       // Es edicion
       // Se consulta la informacion del estudiante, para rellenar el formulario
-      this.estudianteService.obtenerEstudiantes(this.idEstudiante).subscribe({
+      this.estudianteService.obtenerEstudiantesPorID(this.idEstudiante).subscribe({
         next: (temp) => {
           this.formEstudiante = temp;
           // Se rellena la informacion del formulario

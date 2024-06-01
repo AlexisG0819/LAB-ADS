@@ -5,7 +5,7 @@ export function parsearErroresAPI(response: any): string[] {
     if (response.status === 500) {
       // En caso de que el servidor este dando problemas.
       resultado.push(
-        'Ha ocurrido un error en el servidor. Favor intentar mástarde'
+        'Ha ocurrido un error en el servidor. Favor intentar más tarde'
       );
       return resultado;
     }

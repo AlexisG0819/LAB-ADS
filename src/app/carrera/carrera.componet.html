@@ -15,16 +15,16 @@
       <tbody>
         @for (item of lstCarrera; track index; let index = $index) {
         <tr>
-          <td>{{ item.idCarrea }}</td>
+          <td>{{ item.idCarrera}}</td>
           <td>{{ item.codigoCarrera }}</td>
           <td>{{ item.nombreCarrera}}</td>
           <td>
             <!-- Podemos enviar valores a metodos en el .ts de esta  forma-->
-            <button class="btn btn-primary"(click)="updateCarrera(item.idCarrea)">Actualizar</button>
+            <button class="btn btn-primary"(click)="updateCarrera(item.idCarrera)">Actualizar</button>
             <!-- Esta es otra forma con la que podemos enviar valores a metodos en el .ts-->
             <button
               class="btn btn-danger ml-2"
-               (click)="deleteCarrera($event)" value="{{ item.idCarrea }}">Eliminar</button>
+               (click)="deleteCarrera($event)" value="{{ item.idCarrera }}">Eliminar</button>
           </td>
         </tr>
         }

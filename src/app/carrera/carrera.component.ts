@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { Carrera } from '../interfaces/carrera.interface';
-import { CommonModule } from '@angular/common';
 import { CarrerasService } from '../services/carreras.service';
+import { CommonModule } from '@angular/common';
+import { Carrera } from '../interfaces/carrera.interface';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { parsearErroresAPI } from '../utils/Utilities';
@@ -10,7 +10,7 @@ import { parsearErroresAPI } from '../utils/Utilities';
     selector: 'app-carrera',
     standalone: true,
     imports: [CommonModule],
-    templateUrl: '../carrera/carrera.component.html',
+    templateUrl: '../carrera/carrera.componet.html',
     styleUrls: ['../carrera/carrera.component.scss'],
     //styleUrl: './carrera.component.scss',
 })
